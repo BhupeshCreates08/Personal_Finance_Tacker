@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TS Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Personal Finance Tracker</h1>
+
+  <div class="balance">
+    <h2>Your Current Balance: $<span id="balance-amount">0.00</span></h2>
+  </div>
+
+  <form id="finance-form">
+    <input type="text" id="description" placeholder="Description (e.g., Grocery)" required>
+    <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <input type="text" id="category" placeholder="Category (e.g., Food)" required>
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <h3>History</h3>
+  <ul id="transaction-list"></ul>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
